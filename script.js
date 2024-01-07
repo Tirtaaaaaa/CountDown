@@ -7,8 +7,6 @@ const i = document.querySelector("i");
 toogle.addEventListener("click", function () {
   this.classList.toggle("bi-moon-stars");
   if (this.classList.toggle("bi-brightness-high-fill")) {
-    body.style.background =
-      "url(../../assets/img/background.jpg) no-repeat center center / cover";
     body.style.color = "#f9cc41";
     body.style.transition = "1 s";
     a.style.color = "#f9cc41";
@@ -16,8 +14,6 @@ toogle.addEventListener("click", function () {
     sphover.style.background = "white";
     i.style.color = "black";
   } else {
-    body.style.background =
-      "url(../../assets/img/background1.jpg) no-repeat center center / cover";
     body.style.color = "white";
     body.style.transition = "1s";
     a.style.color = "white";
