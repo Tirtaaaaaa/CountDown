@@ -1,0 +1,39 @@
+.simply-countdown {
+  overflow: hidden;
+  display: table;
+  font-family: "Arial", sans-serif;
+  margin: 10% auto;
+}
+/* font-family: 'JetBrains Mono', monospace;
+font-family: 'Roboto', sans-serif; */
+.simply-countdown > .simply-section {
+  height: 50px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin: 15px;
+  font-size: 40px;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 600;
+  background: transparent;
+}
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  text-align: center;
+}
+@media only screen and (max-width: 430px) {
+  .simply-countdown {
+    margin-top: 500% auto;
+  }
+
+  .simply-countdown > .simply-section {
+    flex-direction: column;
+    margin: 0;
+    padding: 10px;
+    font-size: 20px;
+    flex-wrap: wrap-reverse;
+  }
+}

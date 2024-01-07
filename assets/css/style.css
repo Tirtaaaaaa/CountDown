@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: url(../../assets/img/background.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #f9cc41;
+  overflow: hidden;
+  position: relative;
+}
+
+/* https://kyoto.travel/en/l0fe8b00000000h1-img/l0fe8b00000000h8.ico */
+header {
+  height: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  margin: 1.2rem;
+  align-items: center;
+}
+
+/* font-family: 'JetBrains Mono', monospace;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto', sans-serif; */
+header span {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+header h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+header p {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-align: center;
+}
+.simply-countdown {
+  margin-top: 80px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main h1 {
+  font-family: "Poppins", monospace;
+  max-width: max-content;
+  font-size: 5em;
+  font-weight: 400;
+  letter-spacing: 6px;
+  margin: 1.5rem auto 0;
+  text-align: center;
+  border-bottom: 1px solid;
+}
+
+main a {
+  font-family: "Poppins", monospace;
+  margin: -100px auto;
+  border: 3px solid #f9cc41;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: #f9cc41;
+  font-size: 1.2em;
+  letter-spacing: 0;
+  transition: ease-in-out 0.4s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+main a .sphover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transform: translateY(110%);
+  -webkit-transform: translateY(110%);
+  -moz-transform: translateY(110%);
+  -ms-transform: translateY(110%);
+  -o-transform: translateY(110%);
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.5s 0.1s;
+  -webkit-transition: 0.5s 0.1s;
+  -moz-transition: 0.5s 0.1s;
+  -ms-transition: 0.5s 0.1s;
+  -o-transition: 0.5s 0.1s;
+}
+
+main a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+main a:hover .sphover {
+  transform: translateY(0) scale(2);
+  -webkit-transform: translateY(0) scale(2);
+  -moz-transform: translateY(0) scale(2);
+  -ms-transform: translateY(0) scale(2);
+  -o-transform: translateY(0) scale(2);
+}
+
+figure {
+  height: 45vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: center;
+  flex-direction: row;
+}
+
+footer .spotify {
+  align-items: flex-end;
+  width: 400px;
+  height: 150px;
+  margin: 0;
+  border-radius: 25px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  top: -80px;
+  left: 15px;
+  width: 80px;
+  height: 34px;
+}
+.switch input {
+  visibility: hidden;
+}
+
+.switch i {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #f9cc41;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  -webkit-border-radius: 34px;
+  -moz-border-radius: 34px;
+  -ms-border-radius: 34px;
+  -o-border-radius: 34px;
+}
+i::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 5px;
+  bottom: 1px;
+  font-size: 20px;
+  color: #f9cc41;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+input:checked + i {
+  background-color: #f9cc41;
+}
+
+input:focus + i {
+  box-shadow: 0 0 1px #f9cc41;
+}
+
+input:checked + i:before {
+  -webkit-transform: translateX(46px);
+  -ms-transform: translateX(46px);
+  transform: translateX(46px);
+  -moz-transform: translateX(46px);
+  -o-transform: translateX(46px);
+  color: white;
+}
+footer .maps {
+  align-items: flex-end;
+  width: 400px;
+  height: 150px;
+  margin: 1.2rem 1.2rem 4rem;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 430px) {
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .container header {
+    display: none;
+  }
+
+  .container main h1 {
+    font-size: 60px;
+    margin-bottom: 100px;
+  }
+
+  .container main a {
+    margin-top: 100px;
+  }
+
+  .container .simply-countdown {
+    font-size: 10px;
+  }
+
+  .container footer {
+    display: none;
+  }
+
+  .container footer .spotify {
+    display: contents;
+  }
+}
